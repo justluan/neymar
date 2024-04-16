@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ysabeau Infant", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.backgroundvideo video{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+h1 {
+    text-shadow: 2px 6px 3px black
+}
+
+
+.div1 {
+    max-width: 1024px;
+    margin: auto;
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    & .titulo, .redessociais{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+}
+
+
+    & .nome {
+        position: relative;
+        gap: 10px;
+        font-size: 30px;
+        margin-bottom: 10%;
+        
+        & img {
+            position: absolute;
+            top: 41px;
+            left: 266px;
+        }
+
+
+    }
+
+        h1::before {
+        content: "";
+        width: 70px;
+        height: 5px;
+        background-image:linear-gradient(90deg, yellow, green);
+        position: absolute;
+        top: 70px;
+        left: 5px;
+        border-radius: 4px;
+    }
+
+
+    & h1, a{
+        color: white;
+    }
+
+    & a img {
+        width: 30px;
+    }
+
+    & .redessociais{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+
+    & .fotobanner{
+        width: 200px;
+        height: 200px;
+        background-image: url("imagens do projeto/assets/neymar.jpg");
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+        .fotobanner::before {
+            content: "";
+            background-image: linear-gradient(90deg,yellow, green);
+            width: 210px;
+            height: 210px;
+            position: absolute;
+            z-index: -1;
+            border-radius: 100%;
+            top: -5px;
+            right: -5px;
+        }
+
+
+}
+
+.redessociais {
+    & a {
+        margin: 10px 0px;
+        width: 600px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 7px 10px;
+        border-radius: 40px;
+        background-color: rgba(0, 0, 0, 0.377)
+    }
+
+    & p {
+        width: 90%;
+    }
+
+    a:hover {
+        background-color: white;
+        color: black;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .div1 {
+        max-width: 600px;
+    
+
+    a{
+        width: 300px;
+        margin: 5px auto;
+    }
+
+    & .nome {
+        position: relative;
+        gap: 10px;
+        font-size: 25px;
+        margin-bottom: 10%;
+        
+    & img {
+            position: absolute;
+            top: 32px;
+            left: 223px;
+
+        }
+
+
+    }
+
+        h1::before {
+        content: "";
+        width: 55px;
+        height: 5px;
+        background-image:linear-gradient(90deg, yellow, green);
+        position: absolute;
+        top: 60px;
+        left: 4px;
+        border-radius: 4px;
+    }
+}
+}
